@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "userfest-nov-2023"
+version = "0.1.0"
+description = ""
+authors = ["senorkumar <sdkumar@hmc.edu>"]
+readme = "README.md"
+packages = [{include = "userfest_nov_2023"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+ipdb = "^0.13.13"
+groundlight = "^0.12.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
