@@ -20,7 +20,7 @@ def recall_score(gt_labels, pred_labels):
     return metrics.recall_score(gt_labels, pred_labels)
 
 
-with open("results_copy.json", "r") as file:
+with open("results.json", "r") as file:
     results = json.load(file)
 
 gt_labels = []
@@ -48,6 +48,9 @@ for i in range(1, len(gt_labels) + 1):
     precision_score_results.append(precision_score(gt_labels[:i], pred_labels[:i]))
     recall_score_results.append(recall_score(gt_labels[:i], pred_labels[:i]))
 
+accuracy_total = accuracy_score(gt_labels, pred_labels)
+balanced_accuracy_total = balanced_accuracy_score(gt_labels, pred_labels)
+print(f"{accuracy_total=}{balanced_accuracy_total=}")
 
 # create a separate plot for each metric
 fig, axs = plt.subplots(4, 1)
