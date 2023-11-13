@@ -1,5 +1,4 @@
 import json
-import ipdb
 import sklearn.metrics as metrics
 import matplotlib.pyplot as plt
 
@@ -62,4 +61,9 @@ axs[2].plot(x, precision_score_results)
 axs[2].set_title("Precision Score")
 axs[3].plot(x, recall_score_results)
 axs[3].set_title("Recall Score")
+
+# set x axis title to be "Image Queries"
+for ax in axs.flat:
+    ax.set(xlabel="Image Queries")
+
 plt.show()
